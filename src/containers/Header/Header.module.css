@@ -1,0 +1,57 @@
+.name {
+	font-size: 100px;
+	color: #fff;
+
+	/* x: 571 y: 434 //initial
+   x: 578 y: 443 //first shadow
+   x: 583 y: 446 //second shadow
+   x: 569 y: 445 //third shadow
+   */
+	font-family: "Montserrat", sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 10px;
+	margin: 0;
+	padding: 0;
+	padding-top: 270px;
+	padding-bottom: 15px;
+	animation: name 4s linear infinite alternate-reverse;
+}
+
+@keyframes name {
+	from {
+		text-shadow: 7px 9px 0px #d70000, 12px 12px 0px #ea13f2,
+			-1px 14px 0px #ff6e6c;
+	}
+	50% {
+		text-shadow: none;
+	}
+	to {
+		text-shadow: -7px -9px 0px #d70000, -12px -12px 0px #ea13f2,
+			1px -14px 0px #ff6e6c;
+	}
+}
+
+.goDown {
+	font-family: "Unrulyness", sans-serif;
+	color: #fff;
+	font-size: 55px;
+	padding: 0;
+	margin: 0;
+	line-height: 25px;
+}
+
+.icon {
+	color: #fff;
+}
+
+.downButton {
+	display: inline-block;
+	cursor: pointer;
+	margin-top: 30px;
+}
+
+.downButton:hover .icon {
+	transform: translateY(20px);
+	transition: all 0.5s;
+}

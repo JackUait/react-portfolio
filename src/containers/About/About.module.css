@@ -1,0 +1,17 @@
+.wrapper {
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+.face {
+	padding-top: 10px;
+	border-radius: 10px;
+}
+
+.text {
+	color: #808080;
+	font-family: "Montserrat", sans-serif;
+	font-size: 24px;
+	font-weight: 300;
+	padding-top: 30px;
+}

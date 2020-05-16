@@ -1,0 +1,24 @@
+.button {
+	cursor: pointer;
+	border-right: 1px solid #ea13f2;
+	border-bottom: 1px solid #d70000;
+	border-left: 1px solid #d70000;
+	border-top: 1px solid #ea13f2;
+	background-color: #fff;
+	padding: 20px 30px;
+	border-radius: 30px;
+	font-family: "Roboto", sans-serif;
+	font-weight: 700;
+	font-size: 20px;
+	color: #ed4b4b;
+	text-transform: uppercase;
+	letter-spacing: 0.48px;
+	transition: all 0.3s;
+}
+
+.button:hover {
+	box-shadow: 5px 1px 0px #ea13f2, -2px 6px 0px #d70000;
+	/* x: 878 y: 808 initial
+       x: 883 y: 809 first shadow
+       x: 876 y: 814 second shadow */
+}

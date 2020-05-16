@@ -1,0 +1,24 @@
+.form {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 70px;
+	margin-top: 70px;
+}
+
+.small,
+.big {
+	border: none;
+	border-bottom: 2px solid #edf0f1;
+	padding: 10px;
+}
+
+.small {
+	margin-right: 45px;
+	margin-bottom: 30px;
+	width: 300px;
+}
+
+.big {
+	width: 670px;
+	margin-right: 40px;
+}

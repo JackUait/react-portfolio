@@ -1,0 +1,17 @@
+.line {
+	display: inline-block;
+	height: 300px;
+	width: 25px;
+	margin-right: 10px;
+	background-color: #fff;
+	animation: vibration 2s infinite alternate-reverse;
+}
+
+@keyframes vibration {
+	from {
+		height: 300px;
+	}
+	to {
+		height: 100px;
+	}
+}
