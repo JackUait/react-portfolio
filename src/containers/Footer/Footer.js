@@ -6,19 +6,8 @@ const Footer = () => {
 	return (
 		<div>
 			<SubHeader>Follow me everywhere</SubHeader>
-			<i
-				className="fa fa-vk"
-				style={{
-					color: "#ff6e6c",
-					fontSize: 70,
-					marginRight: 40,
-					cursor: "pointer",
-				}}
-			></i>
-			<i
-				className="fa fa-github"
-				style={{ color: "#ff6e6c", fontSize: 70, cursor: "pointer" }}
-			></i>
+			<i className={classes.icon + " fa fa-vk"}></i>
+			<i className={classes.icon + " fa fa-github"}></i>
 		</div>
 	);
 };

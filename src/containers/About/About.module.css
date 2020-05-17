@@ -3,10 +3,12 @@
 	margin: 0 auto;
 }
 
-.face {
-	max-width: 100%;
-	padding-top: 10px;
-	transition: all 0.5s;
+.icon {
+	color: #ff6e6c;
+	font-size: 40px;
+	cursor: pointer;
+	margin-right: 20px;
+	margin-top: 20px;
 }
 
 .text {
@@ -15,12 +17,6 @@
 	font-size: 18px;
 	font-weight: 300;
 	padding: 30px 5px 0 5px;
-}
-
-@media (min-width: 650px) {
-	.face {
-		border-radius: 10px;
-	}
 }
 
 @media (min-width: 800px) {

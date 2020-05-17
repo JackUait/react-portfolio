@@ -1,0 +1,63 @@
+.container {
+	cursor: pointer;
+	text-align: center;
+	width: 310px;
+	height: 310px;
+	margin: 0 auto;
+	perspective: 1200;
+	transform-style: preserve-3d;
+	transition: transform 0.5s;
+}
+
+.container:hover {
+	transform: scale(1.03);
+}
+
+.flipper {
+	position: relative;
+	width: 310px;
+	height: 310px;
+	transform-style: preserve-3d;
+	transition: 0.7s linear;
+}
+
+.back {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	transform: rotateY(-180deg);
+	background: #000;
+	color: white;
+	border-radius: 10px;
+	font-family: "Montserrat", sans-serif;
+	position: absolute;
+	top: 0;
+	left: 0;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+}
+
+.backIcons {
+	margin-top: 20px;
+}
+
+.isFlipped {
+	transform: rotateY(180deg);
+}
+
+.face {
+	max-width: 100%;
+}
+
+@media (min-width: 430px) {
+	.flipper,
+	.container {
+		width: 400px;
+		height: 400px;
+	}
+	.face {
+		border-radius: 10px;
+	}
+}

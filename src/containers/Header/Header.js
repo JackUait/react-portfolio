@@ -2,15 +2,12 @@ import React from "react";
 import classes from "./Header.module.css";
 import SubHeader from "../../components/SubHeader/SubHeader";
 import BlackButton from "../../components/BlackButton/BlackButton";
-import ScrollAnimation from "react-animate-on-scroll";
 
 const Header = ({ goTo, moveDown }) => {
 	return (
 		<div>
 			<h1 className={classes.name}>Evgeniy Pyatkov</h1>
-			<SubHeader className={"animate__animated animate__bounce"}>
-				Frontend Developer from Rostov-on-Don, Russia
-			</SubHeader>
+			<SubHeader>Frontend Developer from Rostov-on-Don, Russia</SubHeader>
 			<BlackButton
 				onClick={goTo}
 				style={{ marginTop: 200 }}
