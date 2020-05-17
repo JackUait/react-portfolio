@@ -1,0 +1,22 @@
+.wrapper {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.quote,
+.author {
+	letter-spacing: 0.62px;
+	font-family: "Montserrat";
+	color: #fff;
+	font-size: 26px;
+	line-height: 36px;
+}
+.quote {
+	font-weight: 400;
+	margin-bottom: 40px;
+	margin-top: 20px;
+}
+
+.author {
+	font-weight: 500;
+}

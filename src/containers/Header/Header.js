@@ -2,13 +2,13 @@ import React from "react";
 import classes from "./Header.module.css";
 import SubHeader from "../../components/SubHeader/SubHeader";
 import BlackButton from "../../components/BlackButton/BlackButton";
-import Music from "../../components/Music/Music";
+import Music from "../Music/Music";
 
 const Header = ({ goTo, moveDown }) => {
 	return (
 		<div>
-			<Music />
 			<h1 className={classes.name}>Evgeniy Pyatkov</h1>
+			<Music />
 			<SubHeader>Frontend Developer from Rostov-on-Don, Russia</SubHeader>
 			<BlackButton
 				onClick={goTo}

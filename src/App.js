@@ -7,7 +7,6 @@ import Portfolio from "./containers/Portfolio/Portfolio";
 import References from "./containers/References/References";
 import Talk from "./containers/Talk/Talk";
 import Footer from "./containers/Footer/Footer";
-import SubHeader from "./components/SubHeader/SubHeader";
 
 import "./App.css";
 import "./overrides.css";
@@ -17,7 +16,7 @@ const App = () => {
 		<ReactFullpage
 			navigation
 			scrollingSpeed={1000}
-			verticalCentered={false}
+			licenseKey={"none"}
 			navigationTooltips={[
 				"Home",
 				"About",

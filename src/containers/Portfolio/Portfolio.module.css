@@ -1,0 +1,17 @@
+.wrapper {
+	width: 1100px;
+	margin: 0 auto;
+}
+
+.more {
+	color: #c8c8c8;
+	font-size: 24px;
+	font-weight: 500;
+	text-decoration: none;
+	transition: all 0.3s;
+}
+
+.more:hover,
+.more:active {
+	color: #ff6e6c;
+}

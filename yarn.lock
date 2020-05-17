@@ -9034,6 +9034,11 @@ react-fast-compare@^2.0.0:
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-2.0.4.tgz#e84b4d455b0fec113e0402c329352715196f81f9"
   integrity sha512-suNP+J1VU1MWFKcyt7RtjiSWUjvidmQSlqu+eHslq+342xCbGTYmC0mEhPCOHxlW0CywylOC1u2DFAT+bv4dBw==
 
+react-id-generator@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/react-id-generator/-/react-id-generator-3.0.0.tgz#20fba0a12355924f1d7b4bfe2ac262c0ad02c7ef"
+  integrity sha512-egmdswpzA/z8UlignCZKmJqrO0EaqmW13M8756wE+V/6NtYf0CdvDjkGpat/Q/djXfg7F/C0267Gff1RHgpfIQ==
+
 react-is@^16.12.0:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
