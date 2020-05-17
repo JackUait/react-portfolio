@@ -5,11 +5,11 @@
 	border-left: 1px solid #d70000;
 	border-top: 1px solid #ea13f2;
 	background-color: #fff;
-	padding: 20px 30px;
+	padding: 15px 20px;
 	border-radius: 30px;
 	font-family: "Roboto", sans-serif;
 	font-weight: 700;
-	font-size: 20px;
+	font-size: 18px;
 	color: #ed4b4b;
 	text-transform: uppercase;
 	letter-spacing: 0.48px;
@@ -21,4 +21,11 @@
 	/* x: 878 y: 808 initial
        x: 883 y: 809 first shadow
        x: 876 y: 814 second shadow */
+}
+
+@media (min-width: 650px) {
+	.button {
+		padding: 20px 30px;
+		font-size: 20px;
+	}
 }

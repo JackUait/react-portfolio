@@ -7,7 +7,7 @@ import Email from "../../components/Email/Email";
 
 const Talk = () => {
 	return (
-		<div>
+		<div className={classes.wrapper}>
 			<HeaderText>Let's Talk</HeaderText>
 			<SubHeader>tell me what you need</SubHeader>
 			<Email />

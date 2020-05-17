@@ -1,5 +1,5 @@
 .wrapper {
-	width: 1200px;
+	max-width: 1200px;
 	margin: 0 auto;
 }
 
@@ -8,8 +8,10 @@
 	letter-spacing: 0.62px;
 	font-family: "Montserrat";
 	color: #fff;
-	font-size: 26px;
+	font-size: 18px;
+	padding: 0 10px;
 	line-height: 36px;
+	transition: all 0.3s;
 }
 .quote {
 	font-weight: 400;
@@ -19,4 +21,18 @@
 
 .author {
 	font-weight: 500;
+}
+
+@media (min-width: 640px) {
+	.quote,
+	.author {
+		font-size: 22px;
+	}
+}
+
+@media (min-width: 870px) {
+	.quote,
+	.author {
+		font-size: 24px;
+	}
 }

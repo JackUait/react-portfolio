@@ -123,14 +123,14 @@ const Projects = ({ choosen }) => {
 	if (!choosen) choosen = "all";
 
 	return (
-		<div>
+		<div className={classes.wrapper}>
 			{projects[choosen].map((project, id) => {
 				return id <= 5 ? (
 					<a key={project.id} href={project.projectLink}>
 						<img
 							alt={"Project " + project.id}
 							className={classes.image}
-							style={id <= 2 ? { marginTop: 30 } : null}
+							// style={id <= 2 ? { marginTop: 30 } : null}
 							src={project.url}
 						/>
 					</a>

@@ -1,6 +1,19 @@
 .HeaderText {
 	font-family: "Montserrat", sans-serif;
 	font-weight: 700;
-	font-size: 60px;
+	font-size: 40px;
 	color: #000;
+	transition: all 0.3s;
+}
+
+@media (min-width: 520px) {
+	.HeaderText {
+		font-size: 50px;
+	}
+}
+
+@media (min-width: 850px) {
+	.HeaderText {
+		font-size: 60px;
+	}
 }

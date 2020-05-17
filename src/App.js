@@ -14,9 +14,9 @@ import "./overrides.css";
 const App = () => {
 	return (
 		<ReactFullpage
+			licenseKey={"none"}
 			navigation
 			scrollingSpeed={1000}
-			licenseKey={"none"}
 			navigationTooltips={[
 				"Home",
 				"About",

@@ -7,18 +7,45 @@
 
 .small,
 .big {
+	font-family: "Montserrat", sans-serif;
+	text-align: center;
 	border: none;
 	border-bottom: 2px solid #edf0f1;
 	padding: 10px;
+	width: 280px;
+	margin: 0 5px;
+	transition: all 0.5s;
+}
+
+.small:focus,
+.big:focus {
+	border-color: #ff5b5b;
 }
 
 .small {
-	margin-right: 45px;
 	margin-bottom: 30px;
-	width: 300px;
 }
 
 .big {
-	width: 670px;
-	margin-right: 40px;
+	resize: none;
+}
+
+@media (min-width: 540px) {
+	.big {
+		width: 520px;
+	}
+}
+
+@media (min-width: 800px) {
+	.big,
+	.small {
+		text-align: left;
+	}
+	.big {
+		width: 635px;
+		margin-right: 40px;
+	}
+	.small {
+		margin-right: 45px;
+	}
 }

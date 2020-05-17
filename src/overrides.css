@@ -4,3 +4,7 @@
 .fp-slidesNav ul li a.active span {
 	background-color: #ff5b5b;
 }
+
+#fp-nav ul li .fp-tooltip.fp-right {
+	color: #2c3e50;
+}

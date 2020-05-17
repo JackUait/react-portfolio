@@ -9,7 +9,11 @@ const Email = () => {
 				<input placeholder={"E-Mail Address"} className={classes.small} />
 			</div>
 			<div>
-				<input placeholder={"Your Message"} className={classes.big} />
+				<textarea
+					placeholder={"Your Message"}
+					className={classes.big}
+					wrap="soft"
+				/>
 			</div>
 		</form>
 	);
