@@ -3,7 +3,7 @@ import nextId from "react-id-generator";
 import classes from "./Projects.module.css";
 
 const Projects = ({ choosen }) => {
-	const [projects, setProjects] = useState({
+	const [projects] = useState({
 		all: [
 			{
 				url:
@@ -130,7 +130,6 @@ const Projects = ({ choosen }) => {
 						<img
 							alt={"Project " + project.id}
 							className={classes.image}
-							// style={id <= 2 ? { marginTop: 30 } : null}
 							src={project.url}
 						/>
 					</a>
