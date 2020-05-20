@@ -8,3 +8,9 @@
 #fp-nav ul li .fp-tooltip.fp-right {
 	color: #2c3e50;
 }
+
+@media (max-width: 800px) {
+	#fp-nav {
+		display: none;
+	}
+}

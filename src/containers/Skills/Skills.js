@@ -9,9 +9,11 @@ const Skills = () => {
 		{ percent: 100, name: "HTML" },
 		{ percent: 99, name: "CSS" },
 		{ percent: 75, name: "JavaScript" },
+		{ percent: 65, name: "English" },
 		{ percent: 60, name: "React" },
 		{ percent: 35, name: "React Native" },
 	]);
+
 	return (
 		<div>
 			<HeaderText color="#fff">Skills</HeaderText>

@@ -12,7 +12,7 @@ const ProgressBar = ({ percent, name }) => {
 			: percent >= 40 && percent < 70
 			? "#f1c40f"
 			: "#2ecc71";
-	const checkWidth = width > 800 ? width / 350 : width / 200;
+	const checkWidth = width > 800 ? width / 350 : width / 150;
 
 	return (
 		<div className={classes.wrapper}>

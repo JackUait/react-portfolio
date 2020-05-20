@@ -2,37 +2,3 @@
 	max-width: 1200px;
 	margin: 0 auto;
 }
-
-.quote,
-.author {
-	letter-spacing: 0.62px;
-	font-family: "Montserrat";
-	color: #fff;
-	font-size: 18px;
-	padding: 0 10px;
-	line-height: 36px;
-	transition: all 0.3s;
-}
-.quote {
-	font-weight: 400;
-	margin-bottom: 40px;
-	margin-top: 20px;
-}
-
-.author {
-	font-weight: 500;
-}
-
-@media (min-width: 640px) {
-	.quote,
-	.author {
-		font-size: 22px;
-	}
-}
-
-@media (min-width: 870px) {
-	.quote,
-	.author {
-		font-size: 24px;
-	}
-}

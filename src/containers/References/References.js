@@ -1,23 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./References.module.css";
 import HeaderText from "../../components/HeaderText/HeaderText";
 import SubHeader from "../../components/SubHeader/SubHeader";
+import Quotes from "../../components/Quotes/Quotes";
 
 const References = () => {
+	const [quotes] = useState([
+		{
+			quote: "First quote",
+			author: "First author",
+			activity: "First work",
+			id: 1,
+		},
+		{
+			quote: "Second quote",
+			author: "Second author",
+			activity: "Second work",
+			id: 2,
+		},
+		{
+			quote: "Third quote",
+			author: "Third author",
+			activity: "Third work",
+			id: 3,
+		},
+	]);
+	const [currentQuote, setCurrentQuote] = useState(0);
 	return (
 		<div className={classes.wrapper}>
 			<HeaderText color="#fff">References</HeaderText>
 			<SubHeader>who says, what says</SubHeader>
-			<div className="flex">
-				<p className={classes.quote}>
-					When an unknown printer took a galley of type and scrambled it to make
-					a type specimen book. It has survived not only five centuries, but
-					also the leap into electronic typesetting, remaining essentially
-					unchanged.
-				</p>
-				<p className={classes.author}>John DOE</p>
-				<p className={classes.author}>Project Manager @Henkel</p>
-			</div>
+			<Quotes
+				quotes={quotes}
+				currentQuote={currentQuote}
+				changeHandler={(id) => setCurrentQuote(id)}
+			/>
 		</div>
 	);
 };

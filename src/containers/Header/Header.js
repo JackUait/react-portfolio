@@ -2,15 +2,19 @@ import React from "react";
 import classes from "./Header.module.css";
 import SubHeader from "../../components/SubHeader/SubHeader";
 import BlackButton from "../../components/BlackButton/BlackButton";
+import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 const Header = ({ goTo, moveDown }) => {
+	const { width } = useWindowDimensions();
 	return (
 		<div>
 			<h1 className={classes.name}>Evgeniy Pyatkov</h1>
-			<SubHeader>Frontend Developer from Rostov-on-Don, Russia</SubHeader>
+			<SubHeader style={{ padding: "0px 10px" }}>
+				Frontend Developer from Rostov-on-Don, Russia
+			</SubHeader>
 			<BlackButton
 				onClick={goTo}
-				style={{ marginTop: 200 }}
+				style={{ marginTop: width > 600 ? 190 : 150 }}
 				text={"Let's Talk"}
 			/>
 			<div onClick={moveDown}>

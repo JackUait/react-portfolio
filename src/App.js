@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 import Header from "./containers/Header/Header";
 import About from "./containers/About/About";
@@ -12,6 +12,8 @@ import "./App.css";
 import "./overrides.css";
 
 const App = () => {
+	const [scrolled, setScrolled] = useState(false);
+
 	return (
 		<ReactFullpage
 			licenseKey={"none"}
@@ -36,6 +38,7 @@ const App = () => {
 				"#000",
 				"#fff",
 			]}
+			onLeave={(origin, destination, direction) => {}}
 			render={({ state, fullpageApi }) => {
 				return (
 					<ReactFullpage.Wrapper>
@@ -47,7 +50,7 @@ const App = () => {
 						</div>
 
 						<div className="section">
-							<About />
+							<About scrolled={scrolled} />
 						</div>
 
 						<div className="section">

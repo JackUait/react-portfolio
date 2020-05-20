@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import nextId from "react-id-generator";
 import classes from "./Projects.module.css";
 
 const Projects = ({ choosen }) => {
@@ -126,7 +125,7 @@ const Projects = ({ choosen }) => {
 		<div className={classes.wrapper}>
 			{projects[choosen].map((project, id) => {
 				return id <= 5 ? (
-					<a key={project.id} href={project.projectLink}>
+					<a key={project.id} className={classes.imageWrapper}>
 						<img
 							alt={"Project " + project.id}
 							className={classes.image}

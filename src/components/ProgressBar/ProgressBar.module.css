@@ -31,6 +31,7 @@
 	bottom: 26px;
 	color: #000;
 	font-weight: 700;
+	user-select: none;
 }
 
 @media (min-width: 800px) {
