@@ -5,7 +5,8 @@ import BlackButton from "../../components/BlackButton/BlackButton";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 const Header = ({ goTo, moveDown }) => {
-	const { width } = useWindowDimensions();
+	const { width, height } = useWindowDimensions();
+	console.log(height)
 	return (
 		<div>
 			<h1 className={classes.name}>Evgeniy Pyatkov</h1>
@@ -14,7 +15,7 @@ const Header = ({ goTo, moveDown }) => {
 			</SubHeader>
 			<BlackButton
 				onClick={goTo}
-				style={{ marginTop: width > 600 ? 190 : 150 }}
+				style={{ marginTop: width > 600 && height > 800? 190 : 110 }}
 				text={"Let's Talk"}
 			/>
 			<div onClick={moveDown}>

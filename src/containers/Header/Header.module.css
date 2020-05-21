@@ -7,7 +7,7 @@
 	letter-spacing: 10px;
 	margin: 0;
 	padding: 0;
-	padding-top: 270px;
+	user-select: none;
 	padding-bottom: 15px;
 	animation: name 4s linear infinite alternate-reverse;
 	transition: all 0.3s;
@@ -23,19 +23,19 @@
 }
 
 .icon {
-	color: #fff;
-	animation: slideDown 1s linear infinite alterntate-reverse;
+	color: #000;
+	transition: all 0.3s;
 }
 
 .downButton {
 	display: inline-block;
 	cursor: pointer;
-	margin-top: 30px;
+	margin-top: 10px;
 }
 
 .downButton:hover .icon {
-	transform: translateY(20px);
-	transition: all 0.5s;
+	color: #fff;
+	transform: translateY(10px);
 }
 
 @keyframes name {
@@ -54,12 +54,6 @@
 	to {
 		text-shadow: -7px -9px 0px #d70000, -12px -12px 0px #ea13f2,
 			1px -14px 0px #ff6e6c;
-	}
-}
-
-@keyframes slideDown {
-	100% {
-		transform: translateY(-5px);
 	}
 }
 

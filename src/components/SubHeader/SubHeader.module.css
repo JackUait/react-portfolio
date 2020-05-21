@@ -1,3 +1,8 @@
+@font-face {
+	font-family: "Unrulyness";
+	src: url(../../fonts/Unrulyness.ttf);
+}
+
 .SubHeader {
 	font-size: 50px;
 	color: #ff5b5b;

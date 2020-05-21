@@ -7,18 +7,23 @@ import Portfolio from "./containers/Portfolio/Portfolio";
 import References from "./containers/References/References";
 import Talk from "./containers/Talk/Talk";
 import Footer from "./containers/Footer/Footer";
+import Code from './components/Code/Code';
+import useWindowDimensions from "./hooks/useWindowDimensions";
 
 import "./App.css";
 import "./overrides.css";
 
 const App = () => {
 	const [scrolled, setScrolled] = useState(false);
+	const {width} = useWindowDimensions();
 
 	return (
 		<ReactFullpage
 			licenseKey={"none"}
 			navigation
 			scrollingSpeed={1000}
+			scrollBar={width > 800 ? false: true}
+			autoScrolling={width > 800 ? true : false}
 			navigationTooltips={[
 				"Home",
 				"About",
@@ -42,6 +47,7 @@ const App = () => {
 			render={({ state, fullpageApi }) => {
 				return (
 					<ReactFullpage.Wrapper>
+						<Code/>s
 						<div className="section">
 							<Header
 								goTo={() => fullpageApi.moveTo(6)}

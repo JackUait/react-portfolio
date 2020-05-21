@@ -1,3 +1,8 @@
+@font-face {
+	font-family: 'Unrulyness';
+	src: local('Unrulyness'), url(./fonts/Unrulyness.ttf) format('truetype')
+}
+
 * {
 	outline: none;
 }
