@@ -1,6 +1,6 @@
 @font-face {
-	font-family: "Unrulyness";
-	src: url(../../fonts/Unrulyness.ttf);
+	font-family: 'Unrulyness';
+	src: local('Unrulyness'), url(../../fonts//Unrulyness.ttf) format('truetype')
 }
 
 .SubHeader {

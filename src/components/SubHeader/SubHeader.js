@@ -1,4 +1,5 @@
 import React from "react";
+// import '../../index.css';
 import classes from "./SubHeader.module.css";
 
 const SubHeader = ({ children, style, size }) => {
