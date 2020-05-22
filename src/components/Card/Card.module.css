@@ -1,8 +1,11 @@
+.flipper, .container {
+	width: 310px;
+	height: 310px;
+}
+
 .container {
 	cursor: pointer;
 	text-align: center;
-	width: 310px;
-	height: 310px;
 	margin: 0 auto;
 	perspective: 1200;
 	transform-style: preserve-3d;
@@ -15,8 +18,6 @@
 
 .flipper {
 	position: relative;
-	width: 310px;
-	height: 310px;
 	transform-style: preserve-3d;
 	transition: 0.7s linear;
 }
@@ -51,14 +52,19 @@
 	pointer-events: none;
 }
 
-@media (min-width: 430px) {
+@media (min-width: 430px ) {
+	.face,
+	.back {
+		border-radius: 10px;
+	}
+}
+
+
+@media (min-height: 900px) {
 	.flipper,
 	.container {
 		width: 400px;
 		height: 400px;
 	}
-	.face,
-	.back {
-		border-radius: 10px;
-	}
+	
 }

@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import classes from "./Card.module.css";
 
-const Card = ({ alt, image, back }) => {
+const Card = ({ alt, image, back, style }) => {
 	const [flipCard, setFlipCard] = useState(false);
 	return (
 		<div
 			className={classes.container}
 			onClick={() => setFlipCard(!flipCard)}
-			style={{ transform: flipCard ? "rotateY(180deg)" : null }}
+			style={{ ...style, transform: flipCard ? "rotateY(180deg)" : null }}
 		>
 			<div className={classes.flipper}>
 				<div className={classes.front}>

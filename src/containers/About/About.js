@@ -11,6 +11,7 @@ const About = ({ scrolled }) => {
 			<HeaderText>About me</HeaderText>
 			<SubHeader>sth you need to know</SubHeader>
 			<Card
+				style={{marginTop: 5}}
 				image="https://soupofpossibilities.com/wp-content/uploads/2018/05/Steve_Jobs_500x.png"
 				alt="Hello it's me"
 				back={

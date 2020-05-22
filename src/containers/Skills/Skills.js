@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import classes from "./Skills.module.css";
 import HeaderText from "../../components/HeaderText/HeaderText";
 import SubHeader from "../../components/SubHeader/SubHeader";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
@@ -9,7 +8,6 @@ const Skills = () => {
 		{ percent: 100, name: "HTML" },
 		{ percent: 99, name: "CSS" },
 		{ percent: 75, name: "JavaScript" },
-		{ percent: 65, name: "English" },
 		{ percent: 60, name: "React" },
 		{ percent: 35, name: "React Native" },
 	]);

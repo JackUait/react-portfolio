@@ -1,5 +1,4 @@
 import React,{useEffect} from 'react';
-import classes from './Code.module.css';
 
 const KonamiCode = () => {
     useEffect(() => {
