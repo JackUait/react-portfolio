@@ -35,7 +35,7 @@ const About = ({ scrolled }) => {
 				create something interesting and complex. Contact me if you are
 				interested <i className="fa fa-heart" style={{ color: "#e74c3c" }}></i>
 			</p>
-			<WhiteButton text={"Download resume"} style={{ marginTop: 30 }} />
+			<WhiteButton text={"Download resume"} style={{ marginTop: 30, marginBottom: 15 }} />
 		</div>
 	);
 };

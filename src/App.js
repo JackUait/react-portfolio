@@ -15,15 +15,15 @@ import "./overrides.css";
 
 const App = () => {
 	const [scrolled, setScrolled] = useState(false);
-	const {width} = useWindowDimensions();
-
+	const {width,height} = useWindowDimensions();
+	const checkDesktop = width >= 1000 && height >= 740;
 	return (
 		<ReactFullpage
 			licenseKey={"none"}
 			navigation
 			scrollingSpeed={1000}
-			scrollBar={width > 800 ? false: true}
-			autoScrolling={width > 800 ? true : false}
+			scrollBar={checkDesktop ? true: false}
+			autoScrolling={checkDesktop ? false : true}
 			navigationTooltips={[
 				"Home",
 				"About",

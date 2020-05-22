@@ -2,6 +2,7 @@
 	font-family: "Montserrat", sans-serif;
 	font-weight: 700;
 	font-size: 40px;
+	line-height: 30px;
 	color: #000;
 	transition: all 0.3s;
 }
@@ -9,11 +10,13 @@
 @media (min-width: 520px) {
 	.HeaderText {
 		font-size: 50px;
+		line-height: 40px;
 	}
 }
 
 @media (min-width: 850px) {
 	.HeaderText {
 		font-size: 60px;
+		line-height: 50px;
 	}
 }

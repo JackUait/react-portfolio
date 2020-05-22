@@ -23,7 +23,7 @@
 }
 
 .icon {
-	color: #000;
+	color: #fff;
 	transition: all 0.3s;
 }
 
@@ -34,7 +34,6 @@
 }
 
 .downButton:hover .icon {
-	color: #fff;
 	transform: translateY(10px);
 }
 

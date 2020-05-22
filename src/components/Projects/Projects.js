@@ -122,7 +122,14 @@ const Projects = ({ choosen }) => {
 	if (!choosen) choosen = "all";
 
 	return (
+		<div>
+			<ul className={classes.list}>
+			<li className={classes.listItem}>All</li>
+			<li className={classes.listItem}>Mobile Apps</li>
+			<li className={classes.listItem}>Web</li>
+		</ul>
 		<div className={classes.wrapper}>
+			
 			{projects[choosen].map((project, id) => {
 				return id <= 5 ? (
 					<a key={project.id} className={classes.imageWrapper}>
@@ -135,6 +142,8 @@ const Projects = ({ choosen }) => {
 				) : null;
 			})}
 		</div>
+		</div>
+
 	);
 };
 

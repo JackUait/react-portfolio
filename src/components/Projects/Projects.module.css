@@ -1,6 +1,7 @@
 .wrapper {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 	margin-top: 30px;
 	margin-bottom: 30px;
 }
@@ -25,6 +26,31 @@
 	height: 140px;
 }
 
+.list {
+	display: flex;
+	justify-content: center;
+	list-style-type: none;
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.listItem {
+	cursor: pointer;
+	margin-right: 20px;
+	font-size: 24px;
+	font-weight: 700;
+	color: #c8c8c8;
+	transition: all 0.25s;
+}
+
+.listItem:hover {
+	color: #ff6e6c;
+}
+
+.active {
+	margin-right: 15px;
+}
+
 @media (min-width: 560px) {
 	.imageWrapper {
 		width: 180px;
@@ -35,14 +61,14 @@
 
 @media (min-width: 780px) {
 	.imageWrapper {
-		width: 240px;
-		height: 240px;
+		width: 210px;
+		height: 210px;
 	}
 }
 
-@media (min-width: 975px) {
+@media (min-width: 1400px) {
 	.imageWrapper {
-		width: 280px;
-		height: 280px;
+		width: 260px;
+		height: 260px;
 	}
 }

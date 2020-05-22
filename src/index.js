@@ -12,7 +12,6 @@ import './fonts/Montserrat-Medium.ttf';
 import './fonts/Montserrat-Bold.ttf';
 import './fonts/Roboto-Regular.ttf';
 import './fonts/Roboto-Bold.ttf';
-import './fonts/Shorthalt-Thin.otf';
 
 ReactDOM.render(
 	<React.StrictMode>

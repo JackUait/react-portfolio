@@ -1,6 +1,6 @@
 .flipper, .container {
-	width: 310px;
-	height: 310px;
+	width: 280px;
+	height: 280px;
 }
 
 .container {
@@ -59,6 +59,12 @@
 	}
 }
 
+@media (min-height: 740px) {
+	.flipper, .container {
+		width: 310px;
+		height: 310px;
+	}
+}
 
 @media (min-height: 900px) {
 	.flipper,
