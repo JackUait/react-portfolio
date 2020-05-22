@@ -3,6 +3,8 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
+import './fonts/Unrulyness.woff2'
+import './fonts/Unrulyness.woff';
 import './fonts/Unrulyness.ttf';
 import './fonts/Montserrat-Light.ttf';
 import './fonts/Montserrat-Regular.ttf';
@@ -10,6 +12,7 @@ import './fonts/Montserrat-Medium.ttf';
 import './fonts/Montserrat-Bold.ttf';
 import './fonts/Roboto-Regular.ttf';
 import './fonts/Roboto-Bold.ttf';
+import './fonts/Shorthalt-Thin.otf';
 
 ReactDOM.render(
 	<React.StrictMode>
