@@ -1,15 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import WebFont from "webfontloader";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-
-WebFont.load({
-	google: {
-		families: ["Montserrat:300,400,500,700", "Roboto:400,700"],
-	},
-});
+import './fonts/Unrulyness.ttf';
+import './fonts/Montserrat-Light.ttf';
+import './fonts/Montserrat-Regular.ttf';
+import './fonts/Montserrat-Medium.ttf';
+import './fonts/Montserrat-Bold.ttf';
+import './fonts/Roboto-Regular.ttf';
+import './fonts/Roboto-Bold.ttf';
 
 ReactDOM.render(
 	<React.StrictMode>
