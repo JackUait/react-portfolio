@@ -7,12 +7,9 @@ import SubHeader from "../../components/SubHeader/SubHeader";
 const Portfolio = () => {
 	return (
 		<div className={classes.wrapper}>
-			<HeaderText style={{paddingTop: 15}}>Portfolio</HeaderText>
+			<HeaderText>Portfolio</HeaderText>
 			<SubHeader>my recent works</SubHeader>
 			<Projects />
-			<a href="#" className={classes.more}>
-				Show more
-			</a>
 		</div>
 	);
 };

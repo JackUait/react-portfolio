@@ -132,7 +132,7 @@ const Projects = ({ choosen }) => {
 			
 			{projects[choosen].map((project, id) => {
 				return id <= 5 ? (
-					<a key={project.id} className={classes.imageWrapper}>
+					<a href="#1" key={project.id} className={classes.imageWrapper}>
 						<img
 							alt={"Project " + project.id}
 							className={classes.image}

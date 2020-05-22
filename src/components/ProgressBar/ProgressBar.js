@@ -5,7 +5,7 @@ import useWindowDimensions from "../../hooks/useWindowDimensions";
 const ProgressBar = ({ percent, name }) => {
 	if (percent >= 100) percent = 100;
 	const { width } = useWindowDimensions();
-
+	
 	const checkPercents =
 		percent < 40
 			? "#e74c3c"

@@ -6,7 +6,6 @@ import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 const Header = ({ goTo, moveDown }) => {
 	const { width, height } = useWindowDimensions();
-	console.log(height)
 	return (
 		<div>
 			<h1 className={classes.name}>Evgeniy Pyatkov</h1>

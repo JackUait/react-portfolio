@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 import Header from "./containers/Header/Header";
 import About from "./containers/About/About";
@@ -14,16 +14,18 @@ import "./App.css";
 import "./overrides.css";
 
 const App = () => {
-	const [scrolled, setScrolled] = useState(false);
-	const {width,height} = useWindowDimensions();
-	const checkDesktop = width >= 1000 && height >= 740;
+	const {width, height} = useWindowDimensions();
+	useEffect(() => {
+		console.log('width: ' + width);
+		console.log('height: ' + height)
+	}, [])
 	return (
 		<ReactFullpage
 			licenseKey={"none"}
 			navigation
 			scrollingSpeed={1000}
-			scrollBar={checkDesktop ? true: false}
-			autoScrolling={checkDesktop ? false : true}
+			scrollBar={width >= 1200? false: true}
+			autoScrolling={width >= 1200 ? true : false}
 			navigationTooltips={[
 				"Home",
 				"About",
@@ -43,11 +45,10 @@ const App = () => {
 				"#000",
 				"#fff",
 			]}
-			onLeave={(origin, destination, direction) => {}}
 			render={({ state, fullpageApi }) => {
 				return (
 					<ReactFullpage.Wrapper>
-						<Code/>s
+						<Code/>
 						<div className="section">
 							<Header
 								goTo={() => fullpageApi.moveTo(6)}
@@ -56,7 +57,7 @@ const App = () => {
 						</div>
 
 						<div className="section">
-							<About scrolled={scrolled} />
+							<About />
 						</div>
 
 						<div className="section">

@@ -27,11 +27,11 @@ const About = ({ scrolled }) => {
 			/>
 			<p className={classes.text}>
 				Hello, I’m a Frontend Developer from Rostov-on-Don, Russia. I love to
-				create websites using <span style={{ color: "#7DE1F9" }}>React</span>{" "}
+				create websites using <span style={{ color: "#7DE1F9", fontWeight: 500 }}>React</span>{" "}
 				and other lower-level technologies. Also I have a little experience of
-				<span style={{ color: "#31DA83" }}> Android</span> and
-				<span style={{ color: "#000000" }}> IOS</span> development using{" "}
-				<span style={{ color: "#7DE1F9" }}>React Native</span>. I want to help
+				<span style={{ color: "#31DA83", fontWeight: 500 }}> Android</span> and
+				<span style={{ color: "#000000",fontWeight: 500 }}> IOS</span> development using{" "}
+				<span style={{ color: "#7DE1F9", fontWeight: 500 }}>React Native</span>. I want to help
 				create something interesting and complex. Contact me if you are
 				interested <i className="fa fa-heart" style={{ color: "#e74c3c" }}></i>
 			</p>
