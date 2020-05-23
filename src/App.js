@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 import Header from "./containers/Header/Header";
 import About from "./containers/About/About";
@@ -14,11 +14,16 @@ import "./App.css";
 import "./overrides.css";
 
 const App = () => {
-	const {width, height} = useWindowDimensions();
-	useEffect(() => {
-		console.log('width: ' + width);
-		console.log('height: ' + height)
-	}, [])
+	const {width} = useWindowDimensions();
+	//Uncomment if you need to check width and height of the window
+	//Also you need to import useEffect to make things work
+
+	// const {height} = useWindowDimensions();
+	// useEffect(() => {
+	// 	console.log('width: ' + width);
+	// 	console.log('height: ' + height)
+	// }, [])
+	
 	return (
 		<ReactFullpage
 			licenseKey={"none"}

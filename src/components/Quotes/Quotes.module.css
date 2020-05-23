@@ -1,5 +1,5 @@
 .quote,
-.author {
+.author, .activity {
 	letter-spacing: 0.62px;
 	font-family: "Montserrat", sans-serif;
 	color: #fff;
@@ -8,26 +8,33 @@
 	line-height: 36px;
 	transition: all 0.3s;
 }
+
 .quote {
-	font-weight: 400;
-	margin-bottom: 40px;
+	font-weight: 500;
+	margin-bottom: 20px;
 	margin-top: 20px;
 }
 
 .author {
-	font-weight: 500;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+.activity {
+	font-weight: 300;
+	text-transform: capitalize;
 }
 
 @media (min-width: 640px) {
 	.quote,
-	.author {
+	.author, .activity {
 		font-size: 22px;
 	}
 }
 
 @media (min-width: 870px) {
 	.quote,
-	.author {
+	.author, .activity {
 		font-size: 24px;
 		padding: 0;
 	}

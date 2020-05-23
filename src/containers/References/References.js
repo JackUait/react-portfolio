@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import classes from "./References.module.css";
 import HeaderText from "../../components/HeaderText/HeaderText";
 import SubHeader from "../../components/SubHeader/SubHeader";
@@ -7,9 +7,9 @@ import Quotes from "../../components/Quotes/Quotes";
 const References = () => {
 	const [quotes] = useState([
 		{
-			quote: "First quote",
-			author: "First author",
-			activity: "First work",
+			quote: "A genuine, compassionate friend who exhibits programming skills that excel beyond expectation, reflecting his incredibly driven nature.",
+			author: "Alexa Bachurski",
+			activity: "The best homie ever",
 			id: 1,
 		},
 		{
@@ -24,8 +24,68 @@ const References = () => {
 			activity: "Third work",
 			id: 3,
 		},
+		{
+			quote: "Fourth quote",
+			author: "Fourth author",
+			activity: "Fourth work",
+			id: 4,
+		},
+		{
+			quote: "Fifth quote",
+			author: "Fifth author",
+			activity: "Fifth work",
+			id: 5,
+		},
 	]);
-	const [currentQuote, setCurrentQuote] = useState(0);
+	let [currentQuote, setCurrentQuote] = useState(0);
+
+	
+
+	const body = [];
+	for (let i = 0; i < quotes.length; i++) {
+		body.push(
+			<li
+				className={classes.switcherItem}
+				key={i}
+				id={i}
+				onClick={() => setCurrentQuote(i)}
+				style={{width: currentQuote === i ? 70 : 15}}
+			></li>,
+		);
+	}
+	useEffect(() => {
+		let changeTimer = setTimeout(function tick () {
+			setCurrentQuote(prev => prev++);
+			if (currentQuote === quotes.length) {
+			}
+			changeTimer = setTimeout(tick,1000);
+		})
+
+		let counter = 0;
+		document.addEventListener('keydown', (event) => {
+			if (event.key === 'ArrowRight') {
+				
+				if (counter < quotes.length-1) {
+					counter++;
+					setCurrentQuote(prev => prev + 1);
+				} else {
+					counter = 0;
+					setCurrentQuote(0);
+				}
+			}
+			if (event.key === 'ArrowLeft') {
+				if (counter === 0) {
+					counter = quotes.length-1;
+					setCurrentQuote(quotes.length-1)
+				} else {
+					counter--;
+					setCurrentQuote(prev => prev -1);
+
+				}
+			}
+		})
+	}, [])
+	
 	return (
 		<div className={classes.wrapper}>
 			<HeaderText color="#fff">References</HeaderText>
@@ -33,8 +93,8 @@ const References = () => {
 			<Quotes
 				quotes={quotes}
 				currentQuote={currentQuote}
-				changeHandler={(id) => setCurrentQuote(id)}
 			/>
+			<ul className={classes.switcher}>{body}</ul>
 		</div>
 	);
 };

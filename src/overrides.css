@@ -5,8 +5,9 @@
 	background-color: #ff5b5b;
 }
 
-#fp-nav ul li .fp-tooltip.fp-right {
-	color: #2c3e50;
+#fp-nav ul li .fp-tooltip.fp-right:nth-child(odd) {
+	/* color: #2c3e50; */
+	color: #000;
 }
 
 .section {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import classes from "./Projects.module.css";
 
-const Projects = ({ choosen }) => {
+const Projects = () => {
 	const [projects] = useState({
 		all: [
 			{
@@ -24,39 +24,21 @@ const Projects = ({ choosen }) => {
 			},
 			{
 				url:
-					"https://static.vecteezy.com/system/resources/thumbnails/000/182/700/small_2x/mobile-app-gui2.jpg",
+					"https://www.computerra.ru/wp-content/uploads/2019/11/400-400-min-site.png",
 				projectLink: "#",
 				id: 4,
 			},
 			{
 				url:
-					"https://static.vecteezy.com/system/resources/thumbnails/000/182/700/small_2x/mobile-app-gui2.jpg",
+					"https://sun9-47.userapi.com/c858024/v858024459/791f2/ul1j8fOudTw.jpg?ava=1",
 				projectLink: "#",
 				id: 5,
 			},
 			{
 				url:
-					"https://static.vecteezy.com/system/resources/thumbnails/000/182/700/small_2x/mobile-app-gui2.jpg",
-				projectLink: "#",
-				id: 6,
-			},
-			{
-				url:
-					"https://www.computerra.ru/wp-content/uploads/2019/11/400-400-min-site.png",
-				projectLink: "#",
-				id: 7,
-			},
-			{
-				url:
-					"https://sun9-47.userapi.com/c858024/v858024459/791f2/ul1j8fOudTw.jpg?ava=1",
-				projectLink: "#",
-				id: 8,
-			},
-			{
-				url:
 					"https://www.digitalkure.com/wp-content/uploads/2018/09/guvenetiket-dis.jpg",
 				projectLink: "#",
-				id: 9,
+				id: 6,
 			},
 		],
 		mobile: [
@@ -77,24 +59,6 @@ const Projects = ({ choosen }) => {
 					"https://static.vecteezy.com/system/resources/thumbnails/000/182/700/small_2x/mobile-app-gui2.jpg",
 				projectLink: "#",
 				id: 3,
-			},
-			{
-				url:
-					"https://static.vecteezy.com/system/resources/thumbnails/000/182/700/small_2x/mobile-app-gui2.jpg",
-				projectLink: "#",
-				id: 4,
-			},
-			{
-				url:
-					"https://static.vecteezy.com/system/resources/thumbnails/000/182/700/small_2x/mobile-app-gui2.jpg",
-				projectLink: "#",
-				id: 5,
-			},
-			{
-				url:
-					"https://static.vecteezy.com/system/resources/thumbnails/000/182/700/small_2x/mobile-app-gui2.jpg",
-				projectLink: "#",
-				id: 6,
 			},
 		],
 		web: [
@@ -118,16 +82,25 @@ const Projects = ({ choosen }) => {
 			},
 		],
 	});
-
-	if (!choosen) choosen = "all";
-
+	const [choosen, setChoosen] = useState('all');
+	
+	const capitalize = (s) => {
+		return s.charAt(0).toUpperCase() + s.slice(1);
+	}
+	
 	return (
 		<div>
 			<ul className={classes.list}>
-			<li className={classes.listItem}>All</li>
-			<li className={classes.listItem}>Mobile Apps</li>
-			<li className={classes.listItem}>Web</li>
-		</ul>
+				{Object.keys(projects).map((chooser, id) => {
+					return (
+						<li key={id}
+							onClick={() => setChoosen(chooser)}
+							style={{color: choosen === chooser ? '#ff6e6c' : null}}
+						  	className={classes.listItem}>
+							{capitalize(chooser)}
+						</li>)
+				})}
+			</ul>
 		<div className={classes.wrapper}>
 			
 			{projects[choosen].map((project, id) => {
@@ -138,6 +111,7 @@ const Projects = ({ choosen }) => {
 							className={classes.image}
 							src={project.url}
 						/>
+						<div className={classes.overlay}></div>
 					</a>
 				) : null;
 			})}

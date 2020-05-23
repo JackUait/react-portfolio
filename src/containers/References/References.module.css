@@ -1,4 +1,25 @@
 .wrapper {
-	max-width: 1200px;
+	max-width: 750px;
 	margin: 0 auto;
+}
+
+.switcher {
+	display: flex;
+	justify-content: center;
+	padding: 0;
+}
+
+.switcherItem {
+	cursor: pointer;
+	list-style: none;
+	background: #fff;
+	margin-right: 10px;
+	width: 13px;
+	height: 13px;
+	border-radius: 50px;
+	transition: all 0.5s;
+}
+
+.switcherItem:hover {
+	width: 70px !important;
 }
