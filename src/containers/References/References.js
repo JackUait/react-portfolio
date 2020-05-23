@@ -54,14 +54,19 @@ const References = () => {
 		);
 	}
 	useEffect(() => {
+		let counter = 0;
+
 		let changeTimer = setTimeout(function tick () {
-			setCurrentQuote(prev => prev++);
-			if (currentQuote === quotes.length) {
+			if (counter === quotes.length -1) {
+				counter = 0;
+				setCurrentQuote(0);
+			} else {
+				counter++;
+				setCurrentQuote(prev => prev + 1);
 			}
-			changeTimer = setTimeout(tick,1000);
+			changeTimer = setTimeout(tick,10000);
 		})
 
-		let counter = 0;
 		document.addEventListener('keydown', (event) => {
 			if (event.key === 'ArrowRight') {
 				
@@ -86,6 +91,7 @@ const References = () => {
 		})
 	}, [])
 	
+	console.log(currentQuote);
 	return (
 		<div className={classes.wrapper}>
 			<HeaderText color="#fff">References</HeaderText>
