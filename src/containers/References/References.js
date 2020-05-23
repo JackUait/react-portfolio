@@ -13,28 +13,16 @@ const References = () => {
 			id: 1,
 		},
 		{
-			quote: "Second quote",
-			author: "Second author",
-			activity: "Second work",
+			quote: "He's doing his best to make his programs work as they supposed to",
+			author: "Aleksey Berezhnoy",
+			activity: "Genius Software Engineer",
 			id: 2,
 		},
 		{
-			quote: "Third quote",
-			author: "Third author",
-			activity: "Third work",
+			quote: "If you are reading this you are really interested what people think about me. Well, I'm interested too, butt",
+			author: "John Doe",
+			activity: "He's not real",
 			id: 3,
-		},
-		{
-			quote: "Fourth quote",
-			author: "Fourth author",
-			activity: "Fourth work",
-			id: 4,
-		},
-		{
-			quote: "Fifth quote",
-			author: "Fifth author",
-			activity: "Fifth work",
-			id: 5,
 		},
 	]);
 	let [currentQuote, setCurrentQuote] = useState(0);
@@ -64,19 +52,19 @@ const References = () => {
 				counter++;
 				setCurrentQuote(prev => prev + 1);
 			}
-			changeTimer = setTimeout(tick,10000);
+			changeTimer = setTimeout(tick,20000);
 		})
 
 		document.addEventListener('keydown', (event) => {
 			if (event.key === 'ArrowRight') {
-				
 				if (counter < quotes.length-1) {
 					counter++;
 					setCurrentQuote(prev => prev + 1);
 				} else {
 					counter = 0;
 					setCurrentQuote(0);
-				}
+				};	
+				
 			}
 			if (event.key === 'ArrowLeft') {
 				if (counter === 0) {

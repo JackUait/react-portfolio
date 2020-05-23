@@ -2,3 +2,13 @@ p {
 	margin: 0;
 	padding: 0;
 }
+
+.loadingBar {
+	position: fixed;
+	z-index: 1;
+	width: 500px;
+	height: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	background-color: red;
+}

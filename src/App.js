@@ -31,6 +31,7 @@ const App = () => {
 			scrollingSpeed={1000}
 			scrollBar={width >= 1200? false: true}
 			autoScrolling={width >= 1200 ? true : false}
+			fitToSection={false}
 			navigationTooltips={[
 				"Home",
 				"About",
@@ -54,6 +55,7 @@ const App = () => {
 				return (
 					<ReactFullpage.Wrapper>
 						<Code/>
+						<div className='loadingBar'></div>
 						<div className="section">
 							<Header
 								goTo={() => fullpageApi.moveTo(6)}
