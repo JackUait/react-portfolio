@@ -9,7 +9,6 @@ import Talk from "./containers/Talk/Talk";
 import Footer from "./containers/Footer/Footer";
 import Code from "./components/Code/Code";
 import useWindowDimensions from "./hooks/useWindowDimensions";
-import { Route } from "react-router-dom";
 
 import "./App.css";
 import "./overrides.css";
