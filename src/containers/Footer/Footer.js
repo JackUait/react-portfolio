@@ -6,8 +6,12 @@ const Footer = () => {
 	return (
 		<div>
 			<SubHeader>Follow me everywhere</SubHeader>
-			<i className={classes.icon + " fa fa-vk"}></i>
-			<i className={classes.icon + " fa fa-github"}></i>
+			<a href="https://vk.com/jackuait">
+				<i className={classes.icon + " fa fa-vk"}></i>
+			</a>
+			<a href="https://github.com/JackUait">
+				<i className={classes.icon + " fa fa-github"}></i>
+			</a>
 		</div>
 	);
 };

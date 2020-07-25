@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import classes from "./Projects.module.css";
+import Link from "react-router-dom";
 
 const Projects = () => {
 	const [projects] = useState({
@@ -82,42 +83,43 @@ const Projects = () => {
 			},
 		],
 	});
-	const [choosen, setChoosen] = useState('all');
-	
+	const [choosen, setChoosen] = useState("all");
+
 	const capitalize = (s) => {
 		return s.charAt(0).toUpperCase() + s.slice(1);
-	}
-	
+	};
+
 	return (
 		<div>
 			<ul className={classes.list}>
 				{Object.keys(projects).map((chooser, id) => {
 					return (
-						<li key={id}
+						<li
+							key={id}
 							onClick={() => setChoosen(chooser)}
-							style={{color: choosen === chooser ? '#ff6e6c' : null}}
-						  	className={classes.listItem}>
+							style={{ color: choosen === chooser ? "#ff6e6c" : null }}
+							className={classes.listItem}
+						>
 							{capitalize(chooser)}
-						</li>)
+						</li>
+					);
 				})}
 			</ul>
-		<div className={classes.wrapper}>
-			
-			{projects[choosen].map((project, id) => {
-				return id <= 5 ? (
-					<a href="#1" key={project.id} className={classes.imageWrapper}>
-						<img
-							alt={"Project " + project.id}
-							className={classes.image}
-							src={project.url}
-						/>
-						<div className={classes.overlay}></div>
-					</a>
-				) : null;
-			})}
+			<div className={classes.wrapper}>
+				{projects[choosen].map((project, id) => {
+					return id <= 5 ? (
+						<a href="#1" key={project.id} className={classes.imageWrapper}>
+							<img
+								alt={"Project " + project.id}
+								className={classes.image}
+								src={project.url}
+							/>
+							<div className={classes.overlay}></div>
+						</a>
+					) : null;
+				})}
+			</div>
 		</div>
-		</div>
-
 	);
 };
 

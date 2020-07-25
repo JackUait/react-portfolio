@@ -9,6 +9,7 @@ import Talk from "./containers/Talk/Talk";
 import Footer from "./containers/Footer/Footer";
 import Code from "./components/Code/Code";
 import useWindowDimensions from "./hooks/useWindowDimensions";
+import { Route } from "react-router-dom";
 
 import "./App.css";
 import "./overrides.css";
@@ -25,66 +26,68 @@ const App = () => {
 	// }, [])
 
 	return (
-		<ReactFullpage
-			licenseKey={"none"}
-			navigation
-			scrollingSpeed={1000}
-			scrollBar={width >= 1200 ? false : true}
-			autoScrolling={width >= 1200 ? true : false}
-			fitToSection={false}
-			navigationTooltips={[
-				"Home",
-				"About",
-				"Skills",
-				"Portfolio",
-				"References",
-				"Let's Talk",
-				"Follow Me",
-			]}
-			sectionsColor={[
-				"#000",
-				"#fff",
-				"#000",
-				"#fff",
-				"#000",
-				"#fff",
-				"#000",
-				"#fff",
-			]}
-			render={({ state, fullpageApi }) => {
-				return (
-					<ReactFullpage.Wrapper>
-						<Code />
-						<div className="section">
-							<Header
-								goTo={() => fullpageApi.moveTo(6)}
-								moveDown={() => fullpageApi.moveSectionDown()}
-							/>
-						</div>
+		<>
+			<ReactFullpage
+				licenseKey={"none"}
+				navigation
+				scrollingSpeed={1000}
+				scrollBar={width >= 1200 ? false : true}
+				autoScrolling={width >= 1200 ? true : false}
+				fitToSection={false}
+				navigationTooltips={[
+					"Home",
+					"About",
+					"Skills",
+					"Portfolio",
+					"References",
+					"Let's Talk",
+					"Follow Me",
+				]}
+				sectionsColor={[
+					"#000",
+					"#fff",
+					"#000",
+					"#fff",
+					"#000",
+					"#fff",
+					"#000",
+					"#fff",
+				]}
+				render={({ fullpageApi }) => {
+					return (
+						<ReactFullpage.Wrapper>
+							<Code />
+							<div className="section">
+								<Header
+									goTo={() => fullpageApi.moveTo(6)}
+									moveDown={() => fullpageApi.moveSectionDown()}
+								/>
+							</div>
 
-						<div className="section">
-							<About />
-						</div>
+							<div className="section">
+								<About />
+							</div>
 
-						<div className="section">
-							<Skills />
-						</div>
-						<div className="section">
-							<Portfolio />
-						</div>
-						<div className="section">
-							<References />
-						</div>
-						<div className="section">
-							<Talk />
-						</div>
-						<div className="section">
-							<Footer />
-						</div>
-					</ReactFullpage.Wrapper>
-				);
-			}}
-		/>
+							<div className="section">
+								<Skills />
+							</div>
+							<div className="section">
+								<Portfolio />
+							</div>
+							<div className="section">
+								<References />
+							</div>
+							<div className="section">
+								<Talk />
+							</div>
+							<div className="section">
+								<Footer />
+							</div>
+						</ReactFullpage.Wrapper>
+					);
+				}}
+			/>
+		</>
 	);
 };
 
