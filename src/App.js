@@ -7,14 +7,14 @@ import Portfolio from "./containers/Portfolio/Portfolio";
 import References from "./containers/References/References";
 import Talk from "./containers/Talk/Talk";
 import Footer from "./containers/Footer/Footer";
-import Code from './components/Code/Code';
+import Code from "./components/Code/Code";
 import useWindowDimensions from "./hooks/useWindowDimensions";
 
 import "./App.css";
 import "./overrides.css";
 
 const App = () => {
-	const {width} = useWindowDimensions();
+	const { width } = useWindowDimensions();
 	//Uncomment if you need to check width and height of the window
 	//Also you need to import useEffect to make things work
 
@@ -23,13 +23,13 @@ const App = () => {
 	// 	console.log('width: ' + width);
 	// 	console.log('height: ' + height)
 	// }, [])
-	
+
 	return (
 		<ReactFullpage
 			licenseKey={"none"}
 			navigation
 			scrollingSpeed={1000}
-			scrollBar={width >= 1200? false: true}
+			scrollBar={width >= 1200 ? false : true}
 			autoScrolling={width >= 1200 ? true : false}
 			fitToSection={false}
 			navigationTooltips={[
@@ -54,8 +54,7 @@ const App = () => {
 			render={({ state, fullpageApi }) => {
 				return (
 					<ReactFullpage.Wrapper>
-						<Code/>
-						<div className='loadingBar'></div>
+						<Code />
 						<div className="section">
 							<Header
 								goTo={() => fullpageApi.moveTo(6)}
