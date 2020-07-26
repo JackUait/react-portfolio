@@ -53,9 +53,12 @@ const About = ({ scrolled }) => {
 					href="https://hh.ru/resume/02279959ff0622e6200039ed1f686d6636706a"
 					target="_blank"
 					rel="noopener noreferrer"
-					style={{ textDecorationColor: "#D6001C" }}
+					style={{
+						textDecorationColor: "#2d3436",
+						textDecorationStyle: "dotted",
+					}}
 				>
-					<span style={{ color: "#D6001C", fontWeight: 500 }}>my resume</span>
+					<span style={{ color: "#2d3436", fontWeight: 500 }}>my resume</span>
 				</a>
 			</p>
 			<a
