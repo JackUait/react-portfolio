@@ -1,4 +1,5 @@
-.flipper, .container {
+.flipper,
+.container {
 	width: 280px;
 	height: 280px;
 }
@@ -20,6 +21,14 @@
 	position: relative;
 	transform-style: preserve-3d;
 	transition: 0.7s linear;
+}
+
+@media (min-height: 740px) {
+	.flipper,
+	.container {
+		width: 310px;
+		height: 310px;
+	}
 }
 
 .back {
@@ -50,27 +59,20 @@
 .face {
 	max-width: 100%;
 	pointer-events: none;
+	max-width: 310px;
+	max-height: 310px;
 }
 
-@media (min-width: 430px ) {
+@media (max-height: 740px) {
+	.face {
+		max-width: 250px;
+		max-height: 250px;
+	}
+}
+
+@media (min-width: 430px) {
 	.face,
 	.back {
 		border-radius: 10px;
 	}
-}
-
-@media (min-height: 740px) {
-	.flipper, .container {
-		width: 310px;
-		height: 310px;
-	}
-}
-
-@media (min-height: 900px) {
-	.flipper,
-	.container {
-		width: 400px;
-		height: 400px;
-	}
-	
 }

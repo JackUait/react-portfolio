@@ -1,85 +1,33 @@
 import React, { useState } from "react";
 import classes from "./Projects.module.css";
-import Link from "react-router-dom";
+import project1 from "../../img/store.png";
+import project2 from "../../img/movies.png";
 
 const Projects = () => {
 	const [projects] = useState({
 		all: [
 			{
-				url:
-					"https://thumbs.dreamstime.com/b/%D0%BF-%D0%BE%D1%81%D0%BA%D0%B8%D0%B9-%D0%BD%D0%B0%D0%B1%D0%BE%D1%80-apps-ui-%D0%B8-%D0%B8-ux-%D0%BF%D0%B5%D1%80%D0%B5-%D0%B2%D0%B8%D0%B6%D0%BD%D0%BE%D0%B9-53749243.jpg",
-				projectLink: "#",
+				url: project1,
+				link: "http://jackstore.surge.sh/",
 				id: 1,
 			},
 			{
-				url:
-					"https://cdn.dribbble.com/users/2094761/screenshots/8193558/media/6eec2be01bc399ff9604d6df984a0703.png",
-				projectLink: "#",
+				url: project2,
+				link: "http://jackmovies.surge.sh/",
 				id: 2,
 			},
-			{
-				url:
-					"https://static.vecteezy.com/system/resources/thumbnails/000/182/700/small_2x/mobile-app-gui2.jpg",
-				projectLink: "#",
-				id: 3,
-			},
-			{
-				url:
-					"https://www.computerra.ru/wp-content/uploads/2019/11/400-400-min-site.png",
-				projectLink: "#",
-				id: 4,
-			},
-			{
-				url:
-					"https://sun9-47.userapi.com/c858024/v858024459/791f2/ul1j8fOudTw.jpg?ava=1",
-				projectLink: "#",
-				id: 5,
-			},
-			{
-				url:
-					"https://www.digitalkure.com/wp-content/uploads/2018/09/guvenetiket-dis.jpg",
-				projectLink: "#",
-				id: 6,
-			},
 		],
-		mobile: [
-			{
-				url:
-					"https://thumbs.dreamstime.com/b/%D0%BF-%D0%BE%D1%81%D0%BA%D0%B8%D0%B9-%D0%BD%D0%B0%D0%B1%D0%BE%D1%80-apps-ui-%D0%B8-%D0%B8-ux-%D0%BF%D0%B5%D1%80%D0%B5-%D0%B2%D0%B8%D0%B6%D0%BD%D0%BE%D0%B9-53749243.jpg",
-				projectLink: "#",
-				id: 1,
-			},
-			{
-				url:
-					"https://cdn.dribbble.com/users/2094761/screenshots/8193558/media/6eec2be01bc399ff9604d6df984a0703.png",
-				projectLink: "#",
-				id: 2,
-			},
-			{
-				url:
-					"https://static.vecteezy.com/system/resources/thumbnails/000/182/700/small_2x/mobile-app-gui2.jpg",
-				projectLink: "#",
-				id: 3,
-			},
-		],
+		mobile: ["empty"],
 		web: [
 			{
-				url:
-					"https://www.computerra.ru/wp-content/uploads/2019/11/400-400-min-site.png",
-				projectLink: "#",
+				url: project1,
+				link: "http://jackstore.surge.sh/",
 				id: 1,
 			},
 			{
-				url:
-					"https://sun9-47.userapi.com/c858024/v858024459/791f2/ul1j8fOudTw.jpg?ava=1",
-				projectLink: "#",
+				url: project2,
+				link: "http://jackmovies.surge.sh/",
 				id: 2,
-			},
-			{
-				url:
-					"https://www.digitalkure.com/wp-content/uploads/2018/09/guvenetiket-dis.jpg",
-				projectLink: "#",
-				id: 3,
 			},
 		],
 	});
@@ -107,16 +55,24 @@ const Projects = () => {
 			</ul>
 			<div className={classes.wrapper}>
 				{projects[choosen].map((project, id) => {
-					return id <= 5 ? (
-						<a href="#1" key={project.id} className={classes.imageWrapper}>
-							<img
-								alt={"Project " + project.id}
-								className={classes.image}
-								src={project.url}
-							/>
-							<div className={classes.overlay}></div>
-						</a>
-					) : null;
+					if (project === "empty") {
+						return <h1 className={classes.empty}>There's no projects yet</h1>;
+					} else {
+						return id <= 5 ? (
+							<a
+								href={project.link}
+								key={project.id}
+								className={classes.imageWrapper}
+							>
+								<img
+									alt={"Project " + project.id}
+									className={classes.image}
+									src={project.url}
+								/>
+								<div className={classes.overlay}></div>
+							</a>
+						) : null;
+					}
 				})}
 			</div>
 		</div>

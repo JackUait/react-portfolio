@@ -76,9 +76,8 @@ const References = () => {
 				}
 			}
 		});
-	}, []);
+	}, [quotes.length]);
 
-	console.log(currentQuote);
 	return (
 		<div className={classes.wrapper}>
 			<HeaderText color="#fff">References</HeaderText>

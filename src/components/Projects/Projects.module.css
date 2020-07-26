@@ -6,7 +6,8 @@
 	margin-bottom: 30px;
 }
 
-.image, .imageWrapper {
+.image,
+.imageWrapper {
 	border-radius: 20px;
 }
 
@@ -49,7 +50,7 @@
 }
 
 .list {
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Montserrat", sans-serif;
 	display: flex;
 	justify-content: center;
 	list-style-type: none;
@@ -89,4 +90,8 @@
 		width: 260px;
 		height: 260px;
 	}
+}
+
+.empty {
+	font-size: 80px;
 }
