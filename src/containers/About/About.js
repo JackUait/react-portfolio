@@ -42,10 +42,8 @@ const About = ({ scrolled }) => {
 				I’m a Frontend Developer from Rostov-on-Don, Russia. I love to create
 				websites using{" "}
 				<span style={{ color: "#3AE2F0", fontWeight: 500 }}>React</span>. Also I
-				have a little experience of
-				<span style={{ color: "#31DA83", fontWeight: 500 }}> Android</span> and
-				<span style={{ color: "#000000", fontWeight: 500 }}> IOS</span>{" "}
-				application development using{" "}
+				have a little experience of Android and IOS application development
+				using{" "}
 				<span style={{ color: "#3AE2F0", fontWeight: 500 }}>React Native</span>{" "}
 				and basic Backend knowledges in{" "}
 				<span style={{ color: "#8CC84B", fontWeight: 500 }}>Node.js</span> (
