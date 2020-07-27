@@ -55,7 +55,6 @@ const About = ({ scrolled }) => {
 					rel="noopener noreferrer"
 					style={{
 						textDecorationColor: "#2d3436",
-						textDecorationStyle: "dotted",
 					}}
 				>
 					<span style={{ color: "#2d3436", fontWeight: 500 }}>my resume</span>

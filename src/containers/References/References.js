@@ -22,7 +22,7 @@ const References = () => {
 		},
 		{
 			quote:
-				"He's a really good at school computer science. To be honest I haven't tested him anywhere else",
+				"He's really good at school computer science. To be honest I haven't tested him anywhere else",
 			author: "Irina Skorohodova",
 			activity: "Writer, actress, schoolgirl, unemployed",
 			id: 3,
@@ -45,16 +45,20 @@ const References = () => {
 	useEffect(() => {
 		let counter = 0;
 
-		let changeTimer = setTimeout(function tick() {
-			if (counter === quotes.length - 1) {
-				counter = 0;
-				setCurrentQuote(0);
-			} else {
-				counter++;
-				setCurrentQuote((prev) => prev + 1);
-			}
-			changeTimer = setTimeout(tick, 15000);
-		});
+		//since state in React is asynchronous
+		//the changeTimer function doesn't track right
+		//the moment of changing currentQuote variable
+
+		// let changeTimer = setTimeout(function tick() {
+		// 	if (counter === quotes.length - 1) {
+		// 		counter = 0;
+		// 		setCurrentQuote(0);
+		// 	} else {
+		// 		counter++;
+		// 		setCurrentQuote((prev) => prev + 1);
+		// 	}
+		// 	changeTimer = setTimeout(tick, 15000);
+		// });
 
 		document.addEventListener("keydown", (event) => {
 			if (event.key === "ArrowRight") {

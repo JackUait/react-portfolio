@@ -14,10 +14,16 @@
 	list-style: none;
 	background: #fff;
 	margin-right: 10px;
-	width: 13px;
-	height: 13px;
+	width: 20px !important;
+	height: 20px;
 	border-radius: 50px;
 	transition: all 0.5s;
+}
+
+@media (min-width: 800px) {
+	.switcherItem {
+		height: 14px;
+	}
 }
 
 .switcherItem:hover {
